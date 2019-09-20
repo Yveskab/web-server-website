@@ -2,6 +2,8 @@ const path = require('path')
 const geoCode= require('./utils/geocode')
 const forecast= require('./utils/forecast')
 
+const port = process.env.PORT || 3000
+
 var express = require('express');
 var exphbs  = require('express-handlebars');
 const publicdirectorypath = path.join(__dirname, '../public')
@@ -77,6 +79,6 @@ app.get('*',(req,res)=>{
     res.send('404 message')
 })
 
-app.listen('3000', ()=>{
-    console.log('server running on port 3000')
+app.listen(PORT, ()=>{
+    console.log('server running on port'+PORT)
 })
