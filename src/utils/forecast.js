@@ -8,7 +8,7 @@ const forecast = (lat,long, callback)=>{
         }else if(body.error){
             callback('wrong coordinate',undefined)
         } else{
-            callback(undefined,' it is currently ' +body.currently.temperature + ' out there, there is ' + body.currently.precipProbability + ' chance of rain')
+            callback(undefined,' it is currently ' +body.currently.temperature +' degree'+ ' out there, there is ' + body.currently.precipProbability + ' chance of rain. '+ 'Humidity is: ' + body.currently.humidity)
             
         }
     })
